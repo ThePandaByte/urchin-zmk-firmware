@@ -39,7 +39,7 @@
 			tapping-term-ms = <200>;
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
-			&studio_unlock
+			&studio_unlock;
 		};
 	};
 
