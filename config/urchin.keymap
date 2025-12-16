@@ -136,9 +136,9 @@
 		macro_layer {
 			label = "Macro.";
 			bindings = <
-			&kp ESCAPE &cad_hatch &cad_erase &cad_rotate &cad_trim		&none &none &none &none &none 
-			&cad_move &cad_pline &cad_dist &cad_fillet &cad_group		&none &none &none &none &none
-			&cad_join &cad_explode &cad_copy &cad_circle &cad_break		&none &none &none &none &none
+			&kp ESCAPE &none &none &none &none                              &none &none &none &none &none 
+			&none &none &none &none &none	             		 	&none &none &none &none &none
+			&none &none &none &none &none					&none &none &none &none &none
 					  		&kp ENTER &mo MACRO2     	&none &none 
 			>;
 		};
@@ -149,7 +149,7 @@
 			bindings = <
 			&kp SLASH &kp N7 &kp N8 &kp N9 &kp BSPC		&none &none &none &none &none 
 			&kp N0 &kp N4 &kp N5 &kp N6 &kp DOT		&none &none &none &none &none
-			&cad_copyb &kp N1 &kp N2 &kp N3 &cad_paste	&none &none &none &none &none
+			&none &kp N1 &kp N2 &kp N3 &none		&none &none &none &none &none
 					 	 	&none &none     &none &none 
 			>;
 		};
