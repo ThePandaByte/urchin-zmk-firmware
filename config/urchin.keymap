@@ -144,7 +144,7 @@
 			&td1   &kp N7 &kp N8 &kp N9 &kp MINUS     	&trans &kp AMPS &kp ASTERISK &kp LPAR &kp CARET
 			&kp N0 &kp N4 &kp N5 &kp N6 &kp DOT		&kp RPAR &kp DOLLAR &kp PERCENT &kp CARET &kp BSLH
 			&kp EQUAL &kp N1 &kp N2 &kp N3 &kp PLUS 	&trans &kp EXCL &kp AT &kp HASH &kp PIPE
-						&mo FNC  &mo SYM2       &DEL &trans
+						&mo FNC  &mo SYM2       &kp DEL &trans
 			>;
 		};
 
