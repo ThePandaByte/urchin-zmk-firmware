@@ -101,24 +101,24 @@
 		//the 2 lower right keys for enter
 		combo_ent {
 		    timeout-ms = <200>;
-		    key-positions = <28-29>;
+		    key-positions = <28 29>;
 		    bindings = <&kp ENTER>;
 		};
 		//press , and . for tab
 		combo_tab {
 		    timeout-ms = <200>;
-		    key-positions = <27-28>;
+		    key-positions = <27 28>;
 		    bindings = <&kp TAB>;
 		};
 		//colon and semi colon
 		combo_semicolon {
 		    timeout-ms = 200;
-		    key-positions = <6-7>;
+		    key-positions = <6 7>;
 		    bindings = <&kp SEMI>;
 		};
 		combo_colon {
 		    timeout-ms = 200;
-		    key-positions = <7-8>;
+		    key-positions = <7 8>;
 		    bindings = <&kp COLON>;
 		};
 		
