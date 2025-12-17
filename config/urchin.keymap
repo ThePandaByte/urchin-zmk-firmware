@@ -41,6 +41,13 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 		};
+		//tapdance config
+		td0: tap_dance_0 {
+		    compatible = "zmk,behavior-tap-dance";
+		    #binding-cells = <0>;
+		    tapping-term-ms = <200>;
+		    bindings = <&kp C_PP>, <C_NEXT>, <C_PREV>;
+		};
 	};
 
 	macros {
