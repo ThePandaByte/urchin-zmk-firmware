@@ -41,12 +41,21 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 		};
-		//tapdance config
+		
+		//TAPDANCE CONFIG---------------------------------
+		//media control
 		td0: tap_dance_0 {
 		    compatible = "zmk,behavior-tap-dance";
 		    #binding-cells = <0>;
 		    tapping-term-ms = <200>;
-		    bindings = <&kp C_PP>, <C_NEXT>, <C_PREV>;
+		    bindings = <&kp C_PP>, <&kp C_NEXT>, <&kp C_PREV>;
+		};
+		//grave and tilde
+		td1: tap_dance_1 {
+		    compatible = "zmk,behavior-tap-dance";
+		    #binding-cells = <0>;
+		    tapping-term-ms = <200>;
+		    bindings = <&kp GRAVE>, <&kp TILDE>;
 		};
 	};
 
@@ -59,6 +68,12 @@
 			#binding-cells = <0>;
 			bindings = <&kp LSHIFT &kp RSHIFT &kp LCTRL &kp RCTRL &kp LALT &kp RALT &kp LGUI &kp RGUI>;
 		};
+		//screen grab shortcut for macOS
+		macprtsc: macprtsc {
+			label = "mac_ss";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings = <&kp LSHIFT>, <&kp LCTRL>, <&kp LGUI>, <&kp N4>;
 	};
 
 	combos {
@@ -114,32 +129,32 @@
 		default_layer {
 			label = "Base";
 			bindings = <
-			&kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
-			&kp A &kp S &kp D &kp F &kp G           &kp H &kp J  &kp K     &kp L &kp SQT
-			&kp Z &kp X &kp C &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp SLASH
+			&kp Q &kp W &kp E       &kp R &kp T           &kp Y &kp U  &kp I     &kp O   &kp P 
+			&kp A &kp S &qt LCTRL D &kp F &kp G           &kp H &kp J  &kp K     &kp L   &kp SQT
+			&kp Z &kp X &kp C       &kp V &kp B           &kp N &kp M  &kp COMMA &kp DOT &kp SLASH
 				&sl EXT &qt LSHIFT SPACE           &kp BSPC &mo SYM
 			>;
 		};
 
 	// Numbers and high frequency symbols
 		sym_layer {
-			label = "Sym.";
+			label = "NumSym.";
 			bindings = <
-			&kp SLASH &kp N7 &kp N8 &kp N9 &kp MINUS	&kp DOLLAR &kp AMPS &kp EXCL &kp EQUAL &kp CARET
-			&kp N0 &kp N4 &kp N5 &kp N6 &kp DOT		&kp LPAR &kp RPAR &kp SQT &kp DQT &kp BSLH
-			&kp ASTERISK &kp N1 &kp N2 &kp N3 &kp PLUS 	&kp HASH &kp UNDER &kp AT &kp PERCENT &kp PIPE
-						&mo FNC  &mo SYM2       &trans &trans
+			&td1   &kp N7 &kp N8 &kp N9 &kp MINUS     	&trans &kp AMPS &kp ASTERISK &kp LPAR &kp CARET
+			&kp N0 &kp N4 &kp N5 &kp N6 &kp DOT		&kp RPAR &kp DOLLAR &kp PERCENT &kp CARET &kp BSLH
+			&kp EQUAL &kp N1 &kp N2 &kp N3 &kp PLUS 	&trans &kp EXCL &kp AT &kp HASH &kp PIPE
+						&mo FNC  &mo SYM2       &DEL &trans
 			>;
 		};
 
 	// Main modifiers and arrow keys
 		ext_layer {
-			label = "Mods";
+			label = "Misc";
 			bindings = <
-			&kp ESC  &kp C_PREV &kp C_PP  &kp C_NEXT  &kp C_PAUSE		&kp PG_UP &kp HOME &kp UP &kp END &kp CAPS
-			&sk LALT &sk LGUI  &sk LSHIFT  &sk LCTRL  &kp RALT 		&kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp DEL
-			&kp LC(Z)  &kp LC(X) &kp LC(C) &kp TAB   &kp LC(V)		&kp LC(BSPC) &kp BSPC &trans &trans &trans
-							&trans &kp LCTRL    		&kp ENTER &mo FNC 
+			&trans  &trans &kp C_VOL_DOWN &kp C_VOL_UP  &td0	&kp PG_UP &msc SCRL_UP &mmv MOVE_UP &mkp MB3 &mkp MB2
+			&sk LGUI &sk LALT  &sk LCTRL  &trans &trans 		&kp PG_DN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp MB1
+			&trans &trans &trans &trans &trans		&msc SCRL_LEFT &msc SCRL_RIGHT &trans &trans &trans
+						&trans &kp LCTRL    		&kp ENTER &mo FNC 
 			>;
 		};
 
@@ -148,7 +163,7 @@
 			label = "FRow";
 			bindings = <
 			&kp F1 &kp F2 &kp F3 &kp F4 &kp F5                  &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 
-			&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &kp RALT     &kp F11 &kp F12  &kp PRINTSCREEN &trans &trans
+			&sk LALT &sk LGUI &sk LSHIFT &sk LCTRL &kp RALT     &kp F11 &kp F12  &kp PRINTSCREEN &macprtsc &trans
 			&none &studio_unlock &none &none &none			    &none &none &none &none &none 
 							  &none &none       &none &none  
 			>;
