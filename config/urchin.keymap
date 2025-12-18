@@ -120,6 +120,7 @@
 		    key-positions = <7 8>;
 		    bindings = <&kp COLON>;
 		};
+	    };
 		
 	};
 
