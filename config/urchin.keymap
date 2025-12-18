@@ -96,7 +96,6 @@
 			key-positions = <30 31>;
 			bindings = <&tog MACRO>;
 		};
-		};
 		//KEYPRESSES--------------------------------------
 		//the 2 lower right keys for enter
 		combo_ent {
