@@ -36,9 +36,9 @@
 			compatible = "zmk,behavior-hold-tap";
 			label = "QUICK_TAP";
 			#binding-cells = <2>;
-			flavor = "hold-preferred";
+			flavor = "tap-preferred";
 			tapping-term-ms = <200>;
-			quick-tap-ms = <200>;
+			quick-tap-ms = <175>;
 			bindings = <&kp>, <&kp>;
 		};
 	};
@@ -147,7 +147,7 @@
 
 	// Numbers and high frequency symbols
 		sym_layer {
-			label = "NumSym.";
+			label = "Numpad";
 			bindings = <
 			&td1   &kp N7 &kp N8 &kp N9 &kp MINUS     	&trans &kp AMPS &kp ASTERISK &kp LPAR &kp PIPE
 			&kp N0 &kp N4 &kp N5 &kp N6 &kp DOT		&kp RPAR &kp DOLLAR &kp PERCENT &kp CARET &kp BSLH
@@ -160,9 +160,9 @@
 		ext_layer {
 			label = "Misc";
 			bindings = <
-			&trans  &trans &kp C_VOL_DN &kp C_VOL_UP  &td0	&kp PG_UP &msc SCRL_UP &mmv MOVE_UP &mkp MB3 &mkp MB2
-			&sk LGUI &sk LALT  &sk LCTRL  &trans &trans 		&kp PG_DN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp MB1
-			&trans &trans &trans &trans &trans		&msc SCRL_LEFT &msc SCRL_RIGHT &trans &trans &trans
+			&trans  &trans &kp C_VOL_DN &kp C_VOL_UP  &td0		&msc SCRL_LEFT &msc SCRL_RIGHT &mmv MOVE_UP &mkp MB3 &mkp MB2
+			&sk LGUI &sk LALT  &sk LCTRL  &trans &trans 		&msc SCRL_UP &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp MB1
+			&trans &trans &trans &trans &trans		&msc SCRL_DOWN &kp LEFT &kp DOWN &kp UP &kp RIGHT
 						&trans &kp LCTRL    		&kp ENTER &mo FNC 
 			>;
 		};
