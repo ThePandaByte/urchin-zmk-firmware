@@ -41,9 +41,11 @@
 			quick-tap-ms = <200>;
 			bindings = <&kp>, <&kp>;
 		};
+	};
 		
 		//TAPDANCE CONFIG---------------------------------
 		//media control
+	tapdance {
 		td0: tap_dance_0 {
 		    compatible = "zmk,behavior-tap-dance";
 		    #binding-cells = <0>;
@@ -119,6 +121,12 @@
 		    timeout-ms = <200>;
 		    key-positions = <7 8>;
 		    bindings = <&kp COLON>;
+		};
+		//top left two trigger esc
+		combo_esc {
+		    timeout-ms = <200>;
+		    key-positions = <0 1>;
+		    bindings = <&kp ESC>;
 		};
 	    };
 		
