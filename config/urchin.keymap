@@ -161,7 +161,7 @@
 			label = "Misc";
 			bindings = <
 			&trans  &trans &kp C_VOL_DN &kp C_VOL_UP  &td0		&msc SCRL_LEFT &msc SCRL_RIGHT &mmv MOVE_UP &mkp MB3 &mkp MB2
-			&sk LGUI &sk LALT  &sk LCTRL  &trans &trans 		&msc SCRL_UP &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp MB1
+			&sk LSHIFT &sk LALT  &sk LCTRL  &trans &trans 		&msc SCRL_UP &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &mkp MB1
 			&trans &trans &trans &trans &trans		&msc SCRL_DOWN &kp LEFT &kp DOWN &kp UP &kp RIGHT
 						&trans &kp LCTRL    		&kp ENTER &mo FNC 
 			>;
